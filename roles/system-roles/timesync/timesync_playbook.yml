@@ -1,0 +1,8 @@
+- name: Time Synchronization Play
+  hosts: servers
+  roles:
+    - rhel-system-roles.timesync
+#  tasks:
+#    - name: Set timezone
+#      timezone:
+#        name: "{{ timezone }}"
