@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: Prints various Ansible facts
+    debug:
+      msg: "{{ ansible_facts['python']['executable'] }}"
+      

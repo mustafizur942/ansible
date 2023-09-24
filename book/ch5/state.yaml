@@ -1,0 +1,12 @@
+---
+- name: testing  stat module output 
+  hosts: all
+  tasks:
+    - name: stat /etc/passwd
+      stat:
+        path: /etc/passwd
+      register: results
+
+    - name: Display stat results
+      debug:
+        var: results

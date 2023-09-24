@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+  - name: Prints various Ansible facts
+    debug:
+      msg: >
+        The default IPv4 address of {{ ansible_facts.fqdn }}
+        is {{ ansible_facts.default_ipv4.address }}
+
+  - name: Prints partition information
+    debug:
+      msg: >
+        The partions are  {{ ansible_facts.fqdn }}
+        is {{ ansible_facts.devices.sda.partitions.sda1.size}}

@@ -1,0 +1,8 @@
+---
+- hosts: webserver
+  tasks:
+  - name: Prints various Ansible facts
+    debug:
+      msg: >
+        The custom facts is  {{ ansible_facts.fqdn }}
+        is {{ ansible_facts['ansible_local']['custom']['users']['user1'] }}

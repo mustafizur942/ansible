@@ -1,0 +1,8 @@
+---
+- name: Installs a package and prints the result
+  hosts: all
+  vars_files:
+    - vars/users.yaml
+  tasks:
+    - debug:
+        msg: "{{users.bjones.last_name}}"

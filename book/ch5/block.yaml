@@ -1,0 +1,18 @@
+---
+- name: testing block 
+  hosts: all
+  tasks: 
+  - name: Touch a file and set permissions
+    file:
+      path: /root/blockfile/file
+      owner: root
+      mode: 0640
+      state: touch
+  - name: Add additional lines to a file
+    blockinfile:
+      path: /root/blockfile/file
+      block: |
+       repitation for bangladesh 
+       I have changed the content
+      state: present
+      marker: "# {mark} this is the second third  marker"
